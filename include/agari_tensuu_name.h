@@ -1,6 +1,7 @@
 #include <compare>
 #include <string>
 enum class agari_tensuu_name {
+  impossible,
   fulo_1_han_gukei,
   fulo_2_han_gukei,
   fulo_3_han_gukei,

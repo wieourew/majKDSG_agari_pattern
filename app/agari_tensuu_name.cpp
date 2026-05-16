@@ -4,6 +4,8 @@
 
 bool is_ryoukei(agari_tensuu_name x){
   switch (x) {
+    //impossibleは順序で最弱になることを目的とする。
+    case agari_tensuu_name::impossible: return false;
     case agari_tensuu_name::fulo_1_han_ryoukei: return true;
     case agari_tensuu_name::fulo_2_han_ryoukei: return true;
     case agari_tensuu_name::fulo_3_han_ryoukei: return true;
@@ -29,6 +31,8 @@ bool is_ryoukei(agari_tensuu_name x){
 
 bool is_fulo(agari_tensuu_name x){
   switch (x) {
+    //impossibleは順序で最弱になることを目的とする。
+    case agari_tensuu_name::impossible: return true;
     case agari_tensuu_name::fulo_1_han_ryoukei: return true;
     case agari_tensuu_name::fulo_2_han_ryoukei: return true;
     case agari_tensuu_name::fulo_3_han_ryoukei: return true;
@@ -54,6 +58,7 @@ bool is_fulo(agari_tensuu_name x){
 
 float raw_han(agari_tensuu_name x){
   switch (x) {
+    case agari_tensuu_name::impossible: return 0;
     case agari_tensuu_name::fulo_1_han_ryoukei: return 1;
     case agari_tensuu_name::fulo_2_han_ryoukei: return 2;
     case agari_tensuu_name::fulo_3_han_ryoukei: return 3;
@@ -79,6 +84,7 @@ float raw_han(agari_tensuu_name x){
 
 std::string to_string(agari_tensuu_name x){
   switch(x){
+    case agari_tensuu_name::impossible: return "×";
     case agari_tensuu_name::fulo_1_han_ryoukei: return "F1良";
     case agari_tensuu_name::fulo_2_han_ryoukei: return "F2良";
     case agari_tensuu_name::fulo_3_han_ryoukei: return "F3良";

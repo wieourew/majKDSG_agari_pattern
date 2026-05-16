@@ -1,5 +1,6 @@
 #include "agari_vector.h"
 constexpr std::array all_agari_tensuu_names ={
+  agari_tensuu_name::impossible,
   agari_tensuu_name::fulo_1_han_gukei,
   agari_tensuu_name::fulo_2_han_gukei,
   agari_tensuu_name::fulo_3_han_gukei,
